@@ -1,0 +1,23 @@
+<%= form_for(@loan) do |f| %>
+
+
+  <% if @loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+      <% @loan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+  <%= label_tag(:link, "Link:") %>
+  <%= f.text_field :link,  :class => "form-control" %></br>
+
+  <!-- Submits the @loan object with the inputs to the create method in the LoansController. -->
+  <%= f.submit %>
+  </div>
+<% end %>
