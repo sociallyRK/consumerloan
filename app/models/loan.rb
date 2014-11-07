@@ -10,7 +10,7 @@ class Loan < ActiveRecord::Base
     puts self.link
     puts "inspect:"
     #puts result.inspect
-    self.loanhash = "hello world"
+    self.properties = "hello world"
     return "done"
     # @loan.loanhash = result
     # puts @loan.loanhash

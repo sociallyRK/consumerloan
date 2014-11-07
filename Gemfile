@@ -10,6 +10,8 @@ gem 'pg'
 # Storing hashes in postgres
 gem 'pg-hstore'
 
+gem 'activerecord-postgres-hstore'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106204541) do
+ActiveRecord::Schema.define(version: 20141107001439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "loans", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
     t.string   "loanhash"
+    t.hstore   "properties"
   end
 
 end
