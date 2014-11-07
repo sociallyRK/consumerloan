@@ -25,8 +25,7 @@ class LoansController < ApplicationController
   # POST /loans.json
   def create
     @loan = Loan.new(loan_params)
-    puts @loan.link
-    @loan.generate_loanhash
+    @loan.store_hash
 
     respond_to do |format|
       if @loan.save
