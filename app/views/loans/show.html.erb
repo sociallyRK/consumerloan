@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>Link: <%= @loan['link']%></p>
-<p>Array: <%= @loan['printview']%>
-<p><%= @loan['printview'].each do |element|
-	<tr>element</tr> end %>
+<!-- <p>Array: <%= @loan['printview']%> -->
+<p>Print View: </p>
+<table>
+	<p><% @loan['printview'].each do |element| %>
+<tr><%= element.each do |subelement| %></tr>
+	<%= subelement %>
+<br>
+<% end %>
+<% end %>
+</table>
 </p>
 <p>Hash: <%= @loan['properties']['results']%>
 </p>
 
-#Example of how its done
-<% @todo_array.each do |t| %>
- <%= puts t %>
-<% end %>
 <%= link_to 'Edit', edit_loan_path(@loan) %> |
 <%= link_to 'Back', loans_path %>
