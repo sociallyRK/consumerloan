@@ -4,7 +4,7 @@
 <!-- <p>Array: <%= @loan['printview']%> -->
 <p>Print View: </p>
 <table>
-	<p><% @loan['printview'].each do |element| %>
+	<p><%= @loan['printview'].each do |element| %>
 <tr><%= element.each do |subelement| %></tr>
 	<%= subelement %>
 <br>
